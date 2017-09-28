@@ -33,6 +33,8 @@ public class bracketCheck {
 			}
 		}
 		
+		// If there are no elements in the stack
+		// All bracket pairs have been identified
 		if (bracketTypes.empty()) {
 			return true;
 		} else {

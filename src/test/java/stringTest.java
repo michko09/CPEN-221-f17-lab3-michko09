@@ -23,4 +23,24 @@ public class stringTest {
 	public void test4() {
 		assertEquals(true, bracketCheck.hasMatchingBrackets("alpha[]({!(+)[]})"));
 	}
+	
+	@Test
+	public void test5() {
+		assertEquals(false, bracketCheck.hasMatchingBrackets("()()()()()()()()[][]{]"));
+	}
+	
+	@Test
+	public void test6() {
+		assertEquals(true, bracketCheck.hasMatchingBrackets("{{[]}()()([])}"));		
+	}
+	
+	@Test
+	public void test7() {
+		assertEquals(true, bracketCheck.hasMatchingBrackets("     ........   ().....     []......"));
+	}
+	
+	@Test
+	public void test8() {
+		assertEquals(true, bracketCheck.hasMatchingBrackets("\t\n\n\n{}\n\n\n{}"));
+	}
 }
